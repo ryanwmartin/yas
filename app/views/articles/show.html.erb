@@ -10,9 +10,21 @@
                 </div>
                 <h4> <%= @article.title.titleize %> </h4>
                 <ul class="post-meta">
-                    <li><span class="far fa-user"></span>By: <%=  @article.user.email %></li>
-                    <li><span class="far fa-comment"></span>Comment 74</li>
-                    <li><span class="far fa-heart"></span>39</li>
+                    <li><span class="far fa-user"></span>
+                      By: <%=  @article.user.email %>
+                    </li>
+
+                    <li>
+                      <%= link_to edit_article_path(@article) do %>
+                        <span class="far fa-edit"></span>edit
+                      <% end %>
+                    </li>
+
+                    <li>
+                      <%= link_to @article, method: :delete do %>
+                        <span class="far fa-trash-alt"></span>delete
+                      <% end %>
+                    </li>
                 </ul>
             </div>
             <div class="text">

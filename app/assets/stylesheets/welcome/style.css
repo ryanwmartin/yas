@@ -6489,8 +6489,8 @@ element css
 
 .blog-single blockquote .text:before {
 	position: absolute;
-	content: "\f145";
-	font-family: Flaticon;
+	content: "\f10e";
+	font-family: 'FontAwesome';
 	font-size: 30px;
 	font-style: normal;
 	-webkit-transform: rotate(180deg) translateX(50%);
