@@ -1,0 +1,39 @@
+<section class="news-section sp-two">
+  <div class="container">
+      <div class="row clearfix">
+          <!--News Block-->
+          <%- @articles.each do |article| %>
+            <div class="news-block-one col-lg-4 col-md-6">
+                <div class="inner-box">
+                    <!-- <div class="image">
+                        <img src="images/resource/news-1.jpg" alt="">
+                        <div class="overlay">
+                            <a class="link-btn" href="blog-details.html">
+                                <i class="fa fa-link"></i>
+                            </a>
+                        </div>
+                    </div> -->
+                    <div class="lower-box">
+                        <div class="date"> <%=  article.date.strftime("%d")%> <span> <%= article.date.strftime("%b") %></span></div>
+                        <div class="post-meta">By: <span> <%= article.title.titleize %></span></div>
+                        <h4> <%= article.quote %> </h4>
+                        <div class="text">
+                          <%= truncate(article.body, length: 200) %>
+                        </div>
+                        <div class="read-more-btn">
+                          <%= link_to "Read More", article, class:"read-more"%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <% end %>
+          <!-- end -->
+      </div>
+      <!-- <ul class="page_pagination_two center mt-40">
+          <li><a href="#" class="tran3s"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+          <li><a href="#" class="active tran3s">1</a></li>
+          <li><a href="#" class="tran3s">2</a></li>
+          <li><a href="#" class="tran3s"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+      </ul> -->
+  </div>
+</section>
