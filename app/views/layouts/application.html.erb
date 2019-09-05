@@ -11,6 +11,9 @@
 
   <body>
     <div class="page-wrapper">
+      <% if current_user %>
+        <%= render "layouts/admin_nav" %>
+      <% end %>
       <%= yield %>
     </div>
   </body>

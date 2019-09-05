@@ -1,5 +1,5 @@
 <% if current_user %>
-  <%= link_to " Sign Out", destroy_user_session_path, method: :delete, class:"theme-btn login-btn" %>
+  <%= link_to " Sign Out", destroy_user_session_path, method: :delete, class:"theme-btn login-btn btn btn-light" %>
 <% else %>
-  <%= link_to " Sign In", new_user_session_path, class:"theme-btn login-btn" %>
+  <%= link_to " Sign In", dashboard_path, class:"theme-btn login-btn" %>
 <% end %>
