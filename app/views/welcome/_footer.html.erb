@@ -13,7 +13,7 @@
                                 <div class="footer-widget about-widget">
                                     <div class="footer-logo">
                                         <figure>
-                                            <a href="index.html"> <%= image_tag "footer-logo" %> </a>
+                                            <!-- <a href="index.html"> <%= image_tag "footer-logo" %> </a> -->
                                         </figure>
                                     </div>
                                     <div class="widget-content">
@@ -21,9 +21,7 @@
                                         <ul class="social-icon-three">
                                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-youtube-v"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -59,30 +57,19 @@
                                     <div class="widget-content">
                                         <div class="posts">
                                             <div class="post">
+                                              <% @articles.each do |article| %>
                                                 <figure class="post-thumb">
-                                                    <%= image_tag "resource/post-thumb-1" %>
-                                                    <a href="blog-single.html" class="overlay-link">
-                                                        <span class="fa fa-link"></span>
-                                                    </a>
+]                                                    <%= link_to article, class:"overlay-link" do %>
+                                                      <span class="fa fa-link"></span>
+                                                    <% end %>
                                                 </figure>
                                                 <div class="desc-text">
-                                                    <a href="blog-single.html">Nine-year old princess hair donating now</a>
+                                                  <%= link_to "#{article.title}", blog_path(article) %>
                                                 </div>
-                                                <div class="time">Aug 25, 2018</div>
+                                                <div class="time">Posted: <%= article.date %></div>
+                                              <% end %>
                                             </div>
 
-                                            <div class="post">
-                                                <figure class="post-thumb">
-                                                    <%= image_tag "resource/post-thumb-2" %>
-                                                    <a href="blog-single.html" class="overlay-link">
-                                                        <span class="fa fa-link"></span>
-                                                    </a>
-                                                </figure>
-                                                <div class="desc-text">
-                                                    <a href="blog-single.html">City town host charity 5km run for poor people</a>
-                                                </div>
-                                                <div class="time">Sep 31, 2018</div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -94,7 +81,7 @@
                                     <h2 class="widget-title">Contact</h2>
                                     <div class="widget-content">
                                         <ul class="contact-info-list">
-                                            <li><i class="fas fa-map-marker-alt"></i>3571 Ringer House, Newyork, NY, 33220 USA</li>
+                                            <li><i class="fas fa-map-marker-alt"></i>4801 Glenwood Ave, Ste 200</li>
                                             <li><i class="fas fa-phone"></i>Support: +(034) 256 7850</li>
                                             <li><i class="fas fa-envelope-open"></i>Email: info@example.com</li>
                                         </ul>

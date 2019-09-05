@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+
   resources :articles
+  resources :blog, only: [:index, :show]
 
   get 'dashboard', to: "dashboard#index"
 

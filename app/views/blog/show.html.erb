@@ -1,0 +1,56 @@
+<div class="blog-single container">
+    <div class="inner-box">
+        <!-- <div class="image">
+            <img src="images/resource/news-10.jpg" alt="">
+        </div> -->
+        <div class="lower-box">
+            <div class="top-content">
+                <div class="date"> <%= @article.date.strftime("%d") %>
+                  <span> <%= @article.date.strftime("%b") %> </span>
+                </div>
+                <h4> <%= @article.title.titleize %> </h4>
+                <ul class="post-meta">
+                    <li><span class="far fa-user"></span>
+                      By: <%=  @article.user.email %>
+                    </li>
+
+                    <li>
+                      <%= link_to edit_article_path(@article) do %>
+                        <span class="far fa-edit"></span>edit
+                      <% end %>
+                    </li>
+
+                    <li>
+                      <%= link_to @article, method: :delete do %>
+                        <span class="far fa-trash-alt"></span>delete
+                      <% end %>
+                    </li>
+                </ul>
+            </div>
+            <div class="text">
+              <p>
+                <%= @article.body %>
+              </p>
+            </div>
+            <blockquote>
+                <div class="text">
+                  <%= @article.quote %>
+                </div>
+                <!-- <h4>Sande Well</h4> -->
+            </blockquote>
+            <!-- <div class="row">
+                <div class="col-md-5">
+                    <div class="image mb-30"><img src="images/resource/blog-single.jpg" alt=""></div>
+                </div>
+                <div class="col-md-7">
+                    <div class="text mb-30">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut laboret dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                        <p>Cillum dolore eu fugiat nulla pariatur excepteur sint ocaecat cup datat non proident. Sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis unde omnis iste.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text">Whea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident. Sunt in culpa qui officia deserunt mollit anim ides laborum. Sed ut perspiciatis unde omnis iste natus.</div>
+        </div> -->
+
+    </div>
+</div>

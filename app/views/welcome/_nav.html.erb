@@ -68,12 +68,10 @@
                                         <li><a href="cause-details.html">Causes Details</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="#">Blog</a>
-                                    <ul>
-                                        <li><a href="blog-1.html">Blog Grid</a></li>
-                                        <li><a href="blog-2.html">Blog Clasic</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
+                                <li class="dropdown">
+                                  <%= link_to blog_index_path do %>
+                                  <i class="fa fa-message">Blog</i>
+                                  <% end %>
                                 </li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
