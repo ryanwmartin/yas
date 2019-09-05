@@ -8,8 +8,24 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-require("bootstrap/dist/js/bootstrap")
 
+require("bootstrap/dist/js/bootstrap")
+require("appear")
+
+require("isotope")
+require("jquery.fancybox/source/jquery.fancybox")
+
+require("map-script")
+require("mixitup")
+require("popover")
+
+require("validate")
+require("wow")
+
+// require("jquery/dist/jquery.min")
+// require("main-slider-script")
+// require("script")
+// require("gmaps")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
