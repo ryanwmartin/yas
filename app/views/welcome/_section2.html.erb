@@ -5,16 +5,18 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="donate-content">
-                            <h1><span>Donate</span> Now</h1>
-                            <h4>We provide support to many organizations</h4>
-                            <div class="text">Adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna ceniam quis nostrud exercitation ullamco laboris.</div>
+                            <h1> <%= t('section2-h1') %></h1>
+                            <h4> <%= t('section2-h4') %></h4>
+                            <div class="text">
+                              <%= t('section2-div1') %>
+                            </div>
 
                             <!--Progress Levels-->
                             <div class="progress-levels">
 
                                 <div class="donation clearfix">
-                                    <div class="text">Donations Target</div>
-                                    <div class="price">$415,000</div>
+                                    <div class="text"> <%= t('section2-text1') %> </div>
+                                    <div class="price"> <%= t('section2-text2') %> </div>
                                 </div>
                                 <!--Skill Box-->
                                 <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
@@ -25,8 +27,8 @@
                                     </div>
                                 </div>
                                 <div class="donation clearfix">
-                                    <div class="text">Donations Received</div>
-                                    <div class="price">$328,600</div>
+                                    <div class="text"> <%= t('section2-text3') %> </div>
+                                    <div class="price"> <%= t('section2-text4') %> </div>
                                 </div>
                                 <!--Skill Box-->
                                 <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
@@ -76,7 +78,7 @@
                             <div class="contact-section-btn text-center">
                                 <div class="form-group style-two">
                                     <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
-                                    <button class="theme-btn btn-style-one w-100" type="submit" data-loading-text="Please wait...">Submit Now</button>
+                                    <button class="theme-btn btn-style-one w-100" type="submit" data-loading-text="Please wait..."> <%= t('section2-button1') %></button>
                                 </div>
                             </div>
                         </form>
