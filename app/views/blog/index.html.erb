@@ -18,7 +18,7 @@
                         <div class="post-meta">By: <span> <%= article.user.email %></span></div>
                         <h4> <%= link_to truncate("#{article.title.titleize}", length: 60 ), blog_path(article) %> </h4>
                         <div class="text">
-                          <%= truncate(article.body, length: 200) %>
+                          <%= truncate("#{article.body}", length: 200) %>
                         </div>
                         <div class="read-more-btn">
                           <%= link_to "Read More", blog_path(article), class:"read-more"%>
