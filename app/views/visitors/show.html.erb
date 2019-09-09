@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @visitor.first_name %>
+</p>
+
+<p>
+  <strong>Middle name:</strong>
+  <%= @visitor.middle_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @visitor.last_name %>
+</p>
+
+<p>
+  <strong>Donation Amount:</strong>
+  <%= @visitor.donation_amount %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @visitor.project %>
+</p>
+<%= link_to 'Edit', edit_visitor_path(@visitor) %> |
+<%= link_to 'Back', visitors_path %>

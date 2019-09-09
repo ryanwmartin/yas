@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :visitors
   resources :articles
   resources :blog, only: [:index, :show]
 

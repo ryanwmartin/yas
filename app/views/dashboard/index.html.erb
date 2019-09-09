@@ -1,2 +1,16 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<section class="news-section">
+  <hr>
+  <div class="container">
+      <div class="row clearfix">
+          <!--News Block-->
+          <div class="card">
+            <h5 class="card-header bg-secondary">
+              <%= link_to 'Visitors and Potential Donors', visitors_path, class:"text-white text-centered" %>
+            </h5>
+            <div class="card-body">
+              <h5 class="card-title"> Visitors: <%= @visitors.count %> </h5>
+              <p class="card-text"> As of <%= Date.today.strftime("%B, %d, %Y") %></p>
+            </div>
+          </div>
+          <!-- end -->
+      </div>
