@@ -34,41 +34,41 @@ articles = Article.create([
       body: "But in a longer format that takes an unreasonable number of words and images",
       quote: "All good things eventually",
       date: Date.today,
-      user: users[0]
+      user_id: users[0]
     },
     {
-      title: "Stuff about things",
+      title: "News about all the right places",
       body: "But in a longer format that takes an unreasonable number of words and images",
       quote: "Not tomorrow, today",
       date: Date.today - 10.days,
-      user: users[0]
+      user_id: users[0]
     },
     {
-      title: "Stuff about things",
+      title: "Stories about all the right candy",
       body: "But in a longer format that takes an unreasonable number of words and images",
       quote: "Rain or shine",
       date: Date.today - 14.days,
-      user: users[1]
+      user_id: users[0]
     },
     {
-      title: "Stuff about things",
+      title: "Movies about things",
       body: "But in a longer format that takes an unreasonable number of words and images",
       quote: "All good things eventually",
       date: Date.today - 35.days,
-      user: users[0]
+      user_id: users[1]
     },
     {
-      title: "Stuff about things",
+      title: "Books about things",
       body: "But in a longer format that takes an unreasonable number of words and images",
       quote: "Not tomorrow, today",
       date: Date.today - 82.days,
-      user: users[0]
+      user_id: users[1]
     },
     {
-      title: "Stuff about things",
+      title: "Records about things",
       body: "But in a longer format that takes an unreasonable number of words and images",
       quote: "Rain or shine",
       date: Date.today - 96.days,
-      user: users[1]
+      user_id: users[1]
     }
   ])
