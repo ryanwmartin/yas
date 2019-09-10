@@ -5,14 +5,23 @@
     <div class="col-md-4">
       <div class="card">
         <div class="card-header">
-          <h1><%= @visitor.full_name %></h1>
+          <h1><%= @donor.full_name %></h1>
         </div>
         <div class="card-body">
+          <strong>Email:</strong>
+          <%= @donor.email %>
+          <br>
+          <strong>Phone:</strong>
+          <%= @donor.phone %>
+          <br>
           <strong>Project:</strong>
-          <%= @visitor.project %>
+          <%= @donor.project %>
           <br>
           <strong>Donation amount:</strong>
-          <%= @visitor.donation_amount %>
+          <%= @donor.donation_amount %>
+          <br>
+          <strong>Status:</strong>
+          <%= @donor.status %>
         </div>
       </div>
     </div>

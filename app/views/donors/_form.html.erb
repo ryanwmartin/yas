@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-md-4">
-    <%= form_with(model: visitor, local: true) do |form| %>
-      <% if visitor.errors.any? %>
+    <%= form_with(model: donor, local: true) do |form| %>
+      <% if donor.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(visitor.errors.count, "error") %> prohibited this visitor from being saved:</h2>
+          <h2><%= pluralize(donor.errors.count, "error") %> prohibited this donor from being saved:</h2>
 
           <ul>
-            <% visitor.errors.full_messages.each do |message| %>
+            <% donor.errors.full_messages.each do |message| %>
               <li><%= message %></li>
             <% end %>
           </ul>
@@ -29,18 +29,35 @@
       </div>
 
       <div class="form-group">
+        <%= form.label :email %>
+        <%= form.text_field :email, class:"form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :phone %>
+        <%= form.text_field :phone, class:"form-control" %>
+      </div>
+
+      <div class="form-group">
         <%= form.label :project %>
         <%= form.text_field :project, class:"form-control" %>
       </div>
 
       <div class="form-group">
         <%= form.label :donation_amount %>
-        <%= form.number_field :donation_amount, class:"form-control" %>
+        <%= form.text_field :donation_amount, class:"form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :status %>
+        <%= form.select :status,
+            Donor.statuses.keys, {},
+            class:"form-control" %>
       </div>
 
       <div class="actions">
-        <%= form.submit class:"btn btn-sm btn-primary" %>
+        <%= form.submit class:"btn btn-sm btn-outline-primary" %>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

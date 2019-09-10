@@ -1,0 +1,45 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Donors</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Project</th>
+        <th>Donation ammount</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @donors.each do |donor| %>
+        <tr>
+          <td><%= donor.full_name %></td>
+          <td><%= donor.email %></td>
+          <td><%= donor.phone %></td>
+          <td><%= donor.project %></td>
+          <td>$ <%= donor.donation_amount / 100 %></td>
+          <td><%= donor.status %></td>
+          <td>
+            <%= link_to donor do %>
+              <span class="far fa-eye"></span>
+            <% end %>
+
+            <%= link_to edit_donor_path(donor) do %>
+              <span class="far fa-edit"></span>
+            <% end %>
+
+            <%= link_to donor, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <span class="far fa-trash-alt"></span>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

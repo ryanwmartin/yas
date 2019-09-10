@@ -1,16 +1,34 @@
 <section class="news-section">
   <hr>
   <div class="container">
-      <div class="row clearfix">
-          <!--News Block-->
-          <div class="card">
-            <h5 class="card-header bg-secondary">
-              <%= link_to 'Visitors and Potential Donors', visitors_path, class:"text-white text-centered" %>
-            </h5>
-            <div class="card-body">
-              <h5 class="card-title"> Visitors: <%= @visitors.count %> </h5>
-              <p class="card-text"> As of <%= Date.today.strftime("%B, %d, %Y") %></p>
-            </div>
+    <div class="row clearfix">
+      <!--Visitor Block-->
+      <div class="col-md-4">
+        <div class="card">
+          <h5 class="card-header bg-primary">
+            <%= link_to 'Potential Donors', visitors_path, class:"text-white text-centered" %>
+          </h5>
+          <div class="card-body">
+            <h5 class="card-title"> Website Visitors: <%= @visitors.count %> </h5>
+            <p class="card-text"> As of <%= Date.today.strftime("%B, %d, %Y") %></p>
           </div>
-          <!-- end -->
+        </div>
       </div>
+      <!-- end -->
+      <br>
+      <!--Donor Block-->
+      <div class="col-md-4">
+        <div class="card">
+          <h5 class="card-header bg-success">
+            <%= link_to 'Active Donors', donors_path, class:"text-white text-centered" %>
+          </h5>
+          <div class="card-body">
+            <h5 class="card-title"> Active Donors: <%= @donors.count %> </h5>
+            <p class="card-text"> As of <%= Date.today.strftime("%B, %d, %Y") %></p>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+    </div>
+  </div>
+</<section>
