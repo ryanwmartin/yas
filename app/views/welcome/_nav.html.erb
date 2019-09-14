@@ -7,8 +7,8 @@
                 <!--Top Left-->
                 <div class="top-left">
                     <ul class="links-nav clearfix">
-                        <li><i class="fa fa-phone text-white"></i>Call Us Now <strong>888-555-1234</strong></li>
-                        <li><i class="fa fa-envelope-open text-white"></i>Send Us Email <strong>support@youthactionsupport.org</strong></li>
+                        <!-- <li><i class="fa fa-phone text-white"></i>Call Us Now <strong>888-555-1234</strong></li> -->
+                        <li><i class="fa fa-envelope-open text-white"></i><strong><%= mail_to "support@youthactionsupport.org", "Send Us Email", subject:"I saw your website and would love to be involved",  class:"text-white" %></strong></li>
                     </ul>
                 </div>
 
@@ -52,28 +52,22 @@
 
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
-                                <li class="current dropdown"><a href="#">Home</a>
+                                <!-- <li class="current dropdown"><a href="#">Home</a>
                                     <ul>
                                         <li><a href="index.html">Home One</a></li>
                                         <li><a href="index-2.html">Home Two</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <li><a href="about.html">About Us</a></li>
                                 <li><a href="events.html">Events</a></li>
-                                <li class="dropdown"><a href="#">Causes</a>
-                                    <ul>
-                                        <li><a href="causes-1.html">Causes One</a></li>
-                                        <li><a href="causes-2.html">Causes Two</a></li>
-                                        <li><a href="causes-3.html">Causes Three</a></li>
-                                        <li><a href="cause-details.html">Causes Details</a></li>
-                                    </ul>
-                                </li>
                                 <li class="dropdown">
                                   <%= link_to blog_index_path do %>
                                   <i class="fa fa-message">Blog</i>
                                   <% end %>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li>
+                                  <%= mail_to "support@youthactionsupport.org", "Contact Us", subject:"I saw your website and would love to be involved" %>
+                                </li>
                             </ul>
                         </div>
                     </nav>

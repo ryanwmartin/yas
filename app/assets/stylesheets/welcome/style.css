@@ -6489,7 +6489,7 @@ element css
 
 .blog-single blockquote .text:before {
 	position: absolute;
-	content: "\f10e";
+	content: "";
 	font-family: 'FontAwesome';
 	font-size: 30px;
 	font-style: normal;

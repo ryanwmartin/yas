@@ -15,13 +15,13 @@
                     </li>
 
                     <li>
-                      <%= link_to edit_article_path(@article) do %>
+                      <%= link_to edit_article_path(@article) if current_user do %>
                         <span class="far fa-edit"></span>edit
                       <% end %>
                     </li>
 
                     <li>
-                      <%= link_to @article, method: :delete do %>
+                      <%= link_to @article, method: :delete if current_user do %>
                         <span class="far fa-trash-alt"></span>delete
                       <% end %>
                     </li>

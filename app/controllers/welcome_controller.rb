@@ -4,4 +4,6 @@ class WelcomeController < ApplicationController
     @articles = Article.all.order("created_at DESC").limit(2)
     @visitor  = Visitor.new
   end
+  def show
+  end
 end

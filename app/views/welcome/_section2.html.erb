@@ -20,11 +20,11 @@
                           <%= form_with model: @visitor do |form| %>
                             <div class="form-group">
                               <%= form.label :first_name %>
-                              <%= form.text_field :first_name, class:"form-control" %>
+                              <%= form.text_field :first_name, class:"form-control", required: true %>
                             </div>
                             <div class="">
                               <%= form.label :last_name %>
-                              <%= form.text_field :last_name, class:"form-control"  %>
+                              <%= form.text_field :last_name, class:"form-control", required: true  %>
                             </div>
                             <div class="">
                               <%= form.label :project %>
@@ -33,6 +33,7 @@
                             <br>
                             <div class="">
                               <%= form.submit 'submit your idea', class:"btn btn-primary" %>
+                              <%= link_to "Donate Now", new_charge_path, class:"btn btn-outline-primary" %>
                             </div>
 
                           <% end %>

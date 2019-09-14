@@ -1,0 +1,27 @@
+<div>
+  <div class="header-blue">
+    <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+      <div class="container"><a class="navbar-brand" href="#">Youth Action Support</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="nav navbar-nav">
+            <li class="nav-item" role="presentation"><%= link_to "Back", root_path, class:"nav-link active" %></li>
+            <li class="nav-item" role="presentation"><%= link_to "Blog", blog_index_path, class:"nav-link active" %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container hero">
+      <div class="row">
+        <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+          <h1>Thank you for your idea.</h1>
+          <p></p>
+          <%= link_to "Donate Now", new_charge_path, class:"btn btn-light btn-lg action-button" %>
+        </div>
+        <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
+          <div class="iphone-mockup"> <%= image_tag 'thanks', class:"device" %> %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

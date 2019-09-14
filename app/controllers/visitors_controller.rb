@@ -1,6 +1,6 @@
 class VisitorsController < ApplicationController
   before_action :set_visitor, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:new, :create]
+  skip_before_action :authenticate_user!, only: [:new, :create, :thanks]
 
   # GET /visitors
   # GET /visitors.json
@@ -33,13 +33,17 @@ class VisitorsController < ApplicationController
           format.html { redirect_to @visitor, notice: 'Visitor was successfully created.' }
           format.json { render :show, status: :created, location: @visitor }
         else
-          format.html { redirect_to new_charge_path }
+          format.html { redirect_to thanks_visitors_path }
         end
       else
         format.html { render :new }
         format.json { render json: @visitor.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def thanks
+    #code
   end
 
   # PATCH/PUT /visitors/1

@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   resources :blog, only: [:index, :show]
   resources :charges, only: [:new, :create]
   resources :donors
-  resources :visitors
+  resources :visitors do
+    collection do
+      get 'thanks'
+    end
+  end
 
   get 'dashboard', to: "dashboard#index"
 
