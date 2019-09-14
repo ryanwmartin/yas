@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_09_232954) do
+ActiveRecord::Schema.define(version: 2019_09_13_232816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -57,7 +57,6 @@ ActiveRecord::Schema.define(version: 2019_09_09_232954) do
     t.string "middle_name"
     t.string "last_name"
     t.string "project"
-    t.decimal "donation_amount", precision: 6, scale: 2
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

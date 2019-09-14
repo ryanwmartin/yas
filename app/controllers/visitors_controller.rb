@@ -1,5 +1,6 @@
 class VisitorsController < ApplicationController
   before_action :set_visitor, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:new, :create]
 
   # GET /visitors
   # GET /visitors.json
@@ -28,8 +29,12 @@ class VisitorsController < ApplicationController
 
     respond_to do |format|
       if @visitor.save
-        format.html { redirect_to @visitor, notice: 'Visitor was successfully created.' }
-        format.json { render :show, status: :created, location: @visitor }
+        if current_user
+          format.html { redirect_to @visitor, notice: 'Visitor was successfully created.' }
+          format.json { render :show, status: :created, location: @visitor }
+        else
+          format.html { redirect_to new_charge_path }
+        end
       else
         format.html { render :new }
         format.json { render json: @visitor.errors, status: :unprocessable_entity }
@@ -69,6 +74,6 @@ class VisitorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def visitor_params
-      params.require(:visitor).permit(:first_name, :middle_name, :last_name, :project, :donation_amount)
+      params.require(:visitor).permit(:first_name, :middle_name, :last_name, :project)
     end
 end

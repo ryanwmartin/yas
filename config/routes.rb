@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :donors
-  resources :visitors
   resources :articles
   resources :blog, only: [:index, :show]
+  resources :charges, only: [:new, :create]
+  resources :donors
+  resources :visitors
 
   get 'dashboard', to: "dashboard#index"
 

@@ -7,7 +7,6 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>Donation Amount</th>
         <th>Project</th>
         <th>Actions</th>
         <!-- <th colspan="3"></th> -->
@@ -18,7 +17,6 @@
       <% @visitors.each do |visitor| %>
         <tr>
           <td><%= visitor.full_name %></td>
-          <td><%= visitor.donation_amount %></td>
           <td><%= visitor.project %> </td>
           <td>
             <%= link_to visitor do %>

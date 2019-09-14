@@ -7,82 +7,36 @@
                         <div class="donate-content">
                             <h1> <%= t('section2-h1') %></h1>
                             <h4> <%= t('section2-h4') %></h4>
-                            <div class="text">
+                            <div class="text text-justify">
                               <%= t('section2-div1') %>
                             </div>
 
                             <!--Progress Levels-->
-                            <div class="progress-levels">
 
-                                <div class="donation clearfix">
-                                    <div class="text"> <%= t('section2-text1') %> </div>
-                                    <div class="price"> <%= t('section2-text2') %> </div>
-                                </div>
-                                <!--Skill Box-->
-                                <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
-                                    <div class="inner">
-                                        <div class="bar">
-                                            <div class="bar-innner"><div class="bar-fill gray-bg" data-percent="100"></div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="donation clearfix">
-                                    <div class="text"> <%= t('section2-text3') %> </div>
-                                    <div class="price"> <%= t('section2-text4') %> </div>
-                                </div>
-                                <!--Skill Box-->
-                                <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
-                                    <div class="inner">
-                                        <div class="bar">
-                                            <div class="bar-innner"><div class="bar-fill" data-percent="80"></div></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <div class="default-form-area">
-                        <form id="contact-form" name="contact_form" class="contact-form style-four" action="inc/sendmail.php" method="post">
-                            <div class="row clearfix">
-                                <div class="col-md-12 column">
-                                    <div class="form-group">
-                                        <input type="text" name="form_name" class="form-control" value="" placeholder="Your Name" required="">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 column">
-                                    <div class="form-group">
-                                        <select name="form_select">
-                                            <option value="" selected>Solar panel installation </option>
-                                            <option value="">Tree planting drive </option>
-                                            <option value="">Legislation to ban plastic waste </option>
-                                            <option value="">New idea for change </option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 column">
-                                    <div class="form-group">
-                                        <select name="form_select">
-                                            <option value="" selected>Donation Amount $</option>
-                                            <option value="">$50.00</option>
-                                            <option value="">$100.00</option>
-                                            <option value="">$150.00</option>
-                                            <option value="">$300.00</option>
-                                            <option value="">$500.00</option>
-                                        </select>
-                                    </div>
-                                </div>
+                          <%= form_with model: @visitor do |form| %>
+                            <div class="form-group">
+                              <%= form.label :first_name %>
+                              <%= form.text_field :first_name, class:"form-control" %>
                             </div>
-                            <div class="contact-section-btn text-center">
-                                <div class="form-group style-two">
-                                    <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
-                                    <button class="theme-btn btn-style-one w-100" type="submit" data-loading-text="Please wait..."> <%= t('section2-button1') %></button>
-                                </div>
+                            <div class="">
+                              <%= form.label :last_name %>
+                              <%= form.text_field :last_name, class:"form-control"  %>
                             </div>
-                        </form>
-                    </div>
+                            <div class="">
+                              <%= form.label :project %>
+                              <%= form.text_area :project, class:"form-control" %>
+                            </div>
+                            <br>
+                            <div class="">
+                              <%= form.submit 'submit your idea', class:"btn btn-primary" %>
+                            </div>
+
+                          <% end %>
+                        </div>
                     </div>
                 </div>
             </div>

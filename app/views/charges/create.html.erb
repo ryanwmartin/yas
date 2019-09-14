@@ -1,0 +1,67 @@
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-12">
+      <h2 class="text-center">Thank you for your <strong>$<%= @amount/100 %> donation</strong>!</h2>
+    </div>
+
+  </div>
+  <br>
+
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Youth Action Support, LLC</h4>
+          <h6 class="text-muted card-subtitle mb-2">4801 Glenwood Ave</h6>
+          <h6 class="text-muted card-subtitle mb-2">Ste 200</h6>
+          <h6 class="text-muted card-subtitle mb-2">Raleigh, NC 27612</h6>
+          <p class="card-text">
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">YAS!</h4>
+          <h6 class="text-muted card-subtitle mb-2">Youth Action Support</h6>
+          <p class="card-text">
+              Youth Action Support has a pending 501(c)(3) application, therefore your donation is eligble for a charitable tax deduction. Please keep this receipt for your records</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Donation</th>
+              <th>Amount</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Support for Youth Action Support: </td>
+              <td> $<%= @amount/100 %> </td>
+              <td> <%= Date.today.strftime("%B, %d %Y") %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
