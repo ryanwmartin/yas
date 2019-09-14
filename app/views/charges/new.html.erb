@@ -24,12 +24,7 @@
               <span>Amount: <%= number_field_tag 'donation_amount', 10, min: 1 %></span>
               <%= link_to "Cancel", root_path, class:"btn btn-sm btn-outline-danger" %>
 
-              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                      data-key="test2343"
-                      data-description="One Time Donation"
-                      data-amount=""
-                      data-locale="auto">
-              </script>
+
             </div>
           <% end %>
         </div>
