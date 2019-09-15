@@ -11,11 +11,11 @@
               <div class="footer-widget about-widget">
                 <div class="footer-logo">
                   <figure>
-                      <!-- <a href="index.html"> <%= image_tag "footer-logo" %> </a> -->
+                    <h1 class="text-white">Yas!</h1>  <!-- <a href="index.html"> <%= image_tag "footer-logo" %> </a> -->
                   </figure>
                 </div>
                 <div class="widget-content">
-                  <div class="text">Significantly pushed under the frugal lemur one and meretricious lucrative inside before swept magnificently expand business.</div>
+                  <div class="text">Supporting Young Adults as they Protect their Rights and Future.</div>
                   <ul class="social-icon-three">
                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fab fa-facebook"></i></a></li>
@@ -48,20 +48,16 @@
                 <div class="footer-widget posts-widget">
                   <h2 class="widget-title">Recent Posts</h2>
                   <div class="widget-content">
-                    <div class="posts">
-                      <div class="post">
+                    <div class="contact-info-list">
+
                         <% @articles.each do |article| %>
-                          <figure class="post-thumb">
-                             <%= link_to article, class:"overlay-link" do %>
-                                <span class="fa fa-link"></span>
-                              <% end %>
-                          </figure>
-                          <div class="desc-text">
-                            <%= link_to "#{article.title}", blog_path(article) %>
+
+                          <div>
+                            <strong><%= link_to "#{article.title}", blog_path(article), class:"text-white" %></strong>
                           </div>
-                          <div class="time">Posted: <%= article.date %></div>
+                          <div class="time">Posted: <%= article.date.strftime("%D") %></div>
                         <% end %>
-                      </div>
+
 
                     </div>
                   </div>
