@@ -3,11 +3,11 @@
         <div class="container">
             <div class="outer-box">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-6">
                         <div class="donate-content">
                             <h1> <%= t('section2-h1') %></h1>
                             <h4> <%= t('section2-h2') %> </h4>
-                            
+
                             <div class="text text-justify">
                               <%= t('section2-div1') %>
                             </div>
@@ -19,20 +19,28 @@
                     <div class="col-lg-5">
                         <div class="default-form-area">
                           <%= form_with model: @visitor do |form| %>
+                            <div class="row">
+                              <div class="form-group col-md-6">
+                                <%= form.label :first_name %>
+                                <%= form.text_field :first_name, class:"form-control", required: true %>
+                              </div>
+                              <div class="form-group col-md-6">
+                                <%= form.label :last_name %>
+                                <%= form.text_field :last_name, class:"form-control", required: true  %>
+                              </div>
+                            </div>
+
                             <div class="form-group">
-                              <%= form.label :first_name %>
-                              <%= form.text_field :first_name, class:"form-control", required: true %>
+                              <%= form.label :email %>
+                              <%= form.text_field :email, class:"form-control" %>
                             </div>
-                            <div class="">
-                              <%= form.label :last_name %>
-                              <%= form.text_field :last_name, class:"form-control", required: true  %>
-                            </div>
-                            <div class="">
+                            <div class="form-group">
                               <%= form.label :project %>
                               <%= form.text_area :project, class:"form-control" %>
                             </div>
                             <br>
-                            <div class="">
+
+                            <div class="form-group">
                               <%= form.submit 'submit your idea', class:"btn btn-primary" %>
                               <%= link_to "Donate Now", new_charge_path, class:"btn btn-outline-primary" %>
                             </div>

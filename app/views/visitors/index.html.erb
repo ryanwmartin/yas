@@ -17,6 +17,7 @@
       <% @visitors.each do |visitor| %>
         <tr>
           <td><%= visitor.full_name %></td>
+          <td><%= visitor.email %></td>
           <td><%= visitor.project %> </td>
           <td>
             <%= link_to visitor do %>

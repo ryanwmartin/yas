@@ -1,13 +1,16 @@
 <p id="notice"><%= notice %></p>
-<%= if current_user: false render 'thank_you' %>
+
 <div class="container">
   <div class="row">
     <div class="col-md-4">
       <div class="card">
         <div class="card-header">
-          <h1><%= @visitor.full_name %></h1>
+          <h1><%= link_to @visitor.full_name, edit_visitor_path(@visitor) %></h1>
         </div>
         <div class="card-body">
+          <strong>Email: </strong>
+          <%= mail_to @visitor.email %>
+          <br>
           <strong>Project:</strong>
           <%= @visitor.project %>
           <br>
