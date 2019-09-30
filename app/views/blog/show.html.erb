@@ -32,6 +32,11 @@
                 <%= @article.body %>
               </p>
             </div>
+            <% if @article.video.attached? && @article.video.previewable? %>
+              <%= video_tag url_for(@article.video), class:"video-container", controls: true %>
+            <% else %>
+              <h4>No Video Uploaded</h4>
+            <% end %>
             <blockquote>
                 <div class="text">
                   <%= @article.quote %>

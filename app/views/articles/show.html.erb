@@ -32,6 +32,11 @@
                 <%= @article.body %>
               </p>
             </div>
+            <% if @article.video.attached? && @article.video.previewable? %>
+              <%= video_tag (url_for@article.video), class:"video-container default-video-box", controls: true %>
+            <% else %>
+              <h4 class="text-center"> <%= link_to "No Video Uploaded", edit_article_path(@article) %> </h4>
+            <% end %>
             <blockquote>
                 <div class="text">
                   <%= @article.quote %>
