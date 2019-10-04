@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'devise', '~> 4.7'
 gem 'stripe', '~> 5.1', '>= 5.1.1'
+gem 'aws-sdk-s3', '~> 1.48'
 
 ruby '2.6.1'
 
