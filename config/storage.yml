@@ -13,7 +13,7 @@ digitalocean:
   secret_access_key: ENV['SECRET_ACCESS_KEY']
   region: nyc3
   bucket: yas-storage
-  endpoint: https://yas-storage.nyc3.digitaloceanspaces.com
+  endpoint: https://nyc3.digitaloceanspaces.com
 # <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
 # <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
 
