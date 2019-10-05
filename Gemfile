@@ -3,7 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'devise', '~> 4.7'
 gem 'stripe', '~> 5.1', '>= 5.1.1'
-gem 'aws-sdk-s3', '~> 1.46', require: false
+# gem 'aws-sdk-s3', '~> 1.46', require: false
+gem 'google-cloud-storage', '~> 1.21', '>= 1.21.1'
 
 ruby '2.6.1'
 
